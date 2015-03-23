@@ -15,8 +15,11 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
-    api/math.cpp
+SOURCES += \
+    api/math.cpp \
+    api/winsystem.cpp \
+    main.cpp
 
 HEADERS += \
-    api/math.h
+    api/math.h \
+    api/winsystem.h
