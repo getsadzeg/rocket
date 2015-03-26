@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 void netcheck();
-void restartsoft();
+void clear();
 void addfile(string name,string information);
 void removefile(string path);
 void readinfo(string infopath, string container[30]);

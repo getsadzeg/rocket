@@ -6,7 +6,6 @@
 #include <fstream>
 #include "winsystem.h"
 using namespace std;
-int winsystem() {
-//
-    return 0;
+void clear() {
+    system("cls");
 }

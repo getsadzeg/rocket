@@ -1,8 +1,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-using namespace std;
 #include "math.h"
+using namespace std;
 /*your function definition here*/
 void sum(int x,int y) {
     cout << "//Sum" << endl;
