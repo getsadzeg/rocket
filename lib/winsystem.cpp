@@ -6,33 +6,6 @@
 #include <fstream>
 #include "winsystem.h"
 using namespace std;
-void clear() { //success
-    system("cls");
-}
-void color(string colour) { //success
-	if (colour == "blue" || colour == "Blue" || colour == "BLUE") system("COLOR 1");
-	else if (colour == "green" || colour == "Green" || colour == "GREEN") system("COLOR 2");
-	else if (colour == "aqua" || colour == "Aqua" || colour == "AQUA") system("COLOR 3");
-	else if (colour == "red" || colour == "Red" || colour == "RED") system("COLOR 4");
-	else if (colour == "purple" || colour == "Purple" || colour == "PURPLE") system("COLOR 5");
-	else if (colour == "yellow" || colour == "Yellow" || colour == "YELLOW") system("COLOR 6");
-	else if (colour == "white" || colour == "White" || colour == "WHITE") system("COLOR 7");
-	else if (colour == "gray" || colour == "grey" || colour == "Gray" || colour == "Grey" || colour == "GRAY" || colour == "GREY") system("COLOR 8");
-}
-void netcheck() { //success
-	int failed = system("ping -n 1 www.google.com");
-	if (failed) {
-		cout << endl;
-		cout << "Internet Connection Is Not Available" << endl;
-		cout << endl;
-		cout << "Warning: If it types the hostname is incorrect,it is internet's problem." << endl;
-	}
-	else {
-		cout << endl;
-		cout << "Internet Connection Is Available" << endl;
-		cout << endl;
-	}
-}
 void move(string oldName, string newName) { //success
 	int result;
 	result = rename(oldName.c_str(), newName.c_str()); 
