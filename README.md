@@ -1,8 +1,17 @@
 # About
-Rocket is C++ Library to write elegant and smart code. It's resource of controlling and managing the whole system,with some of additional primitive opportunities. You can squeeze the amount of code with rocket.
-# Why I Choose Rocket?
-RocketLibrary is elegant,fast and easy to use. It's best side is in software development on C++ platform.
-# Wait for updates?
-Of course. It will get hottest updates and fixes. 
-# Version
-It's beta version now. It's building and testing.
+Rocket is C++ library to operate and manage files easily. You can squeeze the amount of code with rocket.
+# Usage
+Just clone repository with 
+
+```
+git clone https://github.com/getsadzeg/rocket.git
+```
+Now copy folder named 'lib' to your project and access it's files via:
+
+```cpp
+#include "../lib/winsystem.h"
+```
+then you can just call functions demonstrated in 'main' source file.
+
+# Status
+It's developing slowly.
