@@ -1,5 +1,5 @@
-#ifndef WINSYSTEM_H
-#define WINSYSTEM_H
+#ifndef ROCKET_H
+#define ROCKET_H
 #include <string>
 using namespace std;
 void addfile(string name,string information);
