@@ -1,12 +1,14 @@
 // runner source file
 #include <iostream>
 #include <string>
-#include "../lib/winsystem.h"
+#include "../lib/rocket.h"
 using namespace std;
 int main() {
-	readinfo("rockeeet.txt", "lines"); 
-	move("C:\\Users\\User-pc\\Desktop\\magaria.txt", "C:\\Users\\User-pc\\My Documents\\magaria.txt"); 
-	rename("C:\\Users\\User-pc\\My Documents\\magaria.txt", "C:\\Users\\User-pc\\My Documents\\heybro.txt"); 
-	remove("C:\\Users\\User-pc\\My Documents\\heybro.txt"); 
+	readinfo("rockeeet", "lines"); 
+	move("Github\\test", "Desktop\\test"); 
+	rename("Github\test", "Github\\test"); 
+	remove("test"); 
+	addfile("/piki/puku/greeting", "hi"); //console error - cerr activated
+	addfile("greeting", "hi"); //successful try
 	return 0;
 }
