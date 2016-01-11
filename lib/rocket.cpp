@@ -8,7 +8,7 @@
 using namespace std;
 void move(string oldName, string newName) { 
 	int result;
-	result = rename(oldName.c_str(), newName.c_str()); 
+	result = rename(oldName.c_str(), newName.c_str());
 }
 void rename(string oldName, string newName) { 
 	int result1;
@@ -16,14 +16,14 @@ void rename(string oldName, string newName) {
 }
 void addfile(string name, string information) { 
 	ofstream myfile;
-	myfile.open(name, std::ios_base::app);
+	myfile.open(name.c_str(), std::ios_base::app); //c_str() is more safe
 	myfile << information << endl;
 	myfile.close();
 	if (myfile.fail()) {
-		cout << "There's some problem. Try to connect the file later." << endl;
+		cerr << "There's some problem. Try to connect the file later." << endl;
 	}
 	else {
-		cout << "Your information(s) is(are) saved/changed successfully" << endl;
+		cout << "Your information saved/changed successfully" << endl;
 	}
 }
 void removefile(string removePath) { 
