@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
+#include <vector>
 #include "rocket.h"
 using namespace std;
 void move(string oldName, string newName) { 
@@ -30,7 +31,7 @@ void removefile(string removePath) {
 	remove(removePath.c_str());
 }
 void readinfo(string infopath, string choice) { 
-	string container[100];
+	vector <string> v;
 	ifstream readfile(infopath);
 	if (choice == "default" || choice == "Default" || choice == "DEFAULT") {
 		string line1;
@@ -38,27 +39,28 @@ void readinfo(string infopath, string choice) {
 			cout << line1 << endl;
 		readfile.close();
 	}
-	else if (choice == "lines" || choice == "Lines" || choice == "LINES") {
+	/*else if (choice == "lines" || choice == "Lines" || choice == "LINES") {
 		for (int i = 0; i < 100; i++) {
 			for (int j = 0; j < 100; j++)
-				readfile >> container[j];
+				readfile >> v[j];
 			readfile.close();
 		}
 		for (int i = 0; i < 100; i++) {
-			cout << container[i] << " ";
+			cout << v[i] << " ";
 		}
 		cout << endl;
 		cout << "Warning: If you have less informations than we defined,there would be empty seats. " << endl;
-	}
+	}*/
 	else if (choice == "columns" || choice == "Columns" || choice == "COLUMNS") {
 		for (int i = 0; i < 100; i++) {
 			for (int j = 0; j < 100; j++)
-				readfile >> container[j];
+				readfile >> v[j]; // segmentation fault here.
 			readfile.close();
 		}
 		for (int i = 0; i < 100; i++) {
-			cout << container[i] << endl;
-			cout << "Warning: If you have less informations than we defined,there would be empty seats." << endl;
+			cout << v[i] << endl;		
 		}
+		cout << "Warning: If you have less informations than we defined,there would be empty seats." << endl;
+
 	}
 }
