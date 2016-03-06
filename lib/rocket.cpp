@@ -33,8 +33,8 @@ void removefile(string removePath) {
 void readinfo(string infopath, string choice) { 
 	vector <string> v;
 	ifstream readfile(infopath);
+	string line1;
 	if (choice == "default" || choice == "Default" || choice == "DEFAULT") {
-		string line1;
 		while (getline(readfile, line1))
 			cout << line1 << endl;
 		readfile.close();
@@ -52,15 +52,13 @@ void readinfo(string infopath, string choice) {
 		cout << "Warning: If you have less informations than we defined,there would be empty seats. " << endl;
 	}*/
 	else if (choice == "columns" || choice == "Columns" || choice == "COLUMNS") {
-		for (int i = 0; i < 100; i++) {
-			for (int j = 0; j < 100; j++)
-				readfile >> v[j]; // segmentation fault here.
-			readfile.close();
+		while(readfile >> line1) {
+			v.push_back(line1);
 		}
-		for (int i = 0; i < 100; i++) {
+		readfile.close();
+		for (int i = 0; i < v.size(); i++) {
 			cout << v[i] << endl;		
 		}
-		cout << "Warning: If you have less informations than we defined,there would be empty seats." << endl;
-
+		
 	}
 }
