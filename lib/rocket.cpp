@@ -7,6 +7,9 @@
 #include <vector>
 #include "rocket.h"
 using namespace std;
+const int SUCCESS = 1;
+const int FAIL = 0;
+
 void move(string oldName, string newName) { 
 	int result;
 	result = rename(oldName.c_str(), newName.c_str());
@@ -21,10 +24,10 @@ void addfile(string name, string information) {
 	myfile << information << endl;
 	myfile.close();
 	if (myfile.fail()) {
-		cerr << "There's some problem. Try to connect the file later." << endl;
+		cerr << FAIL << endl;
 	}
 	else {
-		cout << "Your information saved/changed successfully" << endl;
+		cout << SUCCESS << endl;
 	}
 }
 void removefile(string removePath) { 
