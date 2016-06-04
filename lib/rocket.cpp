@@ -42,18 +42,7 @@ void readinfo(string infopath, string choice) {
 			cout << line1 << endl;
 		readfile.close();
 	}
-	/*else if (choice == "lines" || choice == "Lines" || choice == "LINES") {
-		for (int i = 0; i < 100; i++) {
-			for (int j = 0; j < 100; j++)
-				readfile >> v[j];
-			readfile.close();
-		}
-		for (int i = 0; i < 100; i++) {
-			cout << v[i] << " ";
-		}
-		cout << endl;
-		cout << "Warning: If you have less informations than we defined,there would be empty seats. " << endl;
-	}*/
+	
 	else if (choice == "columns" || choice == "Columns" || choice == "COLUMNS") {
 		while(readfile >> line1) {
 			v.push_back(line1);
