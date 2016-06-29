@@ -15,8 +15,7 @@ void move(string oldName, string newName) {
 	result = rename(oldName.c_str(), newName.c_str());
 }
 void rename(string oldName, string newName) { 
-	int result1;
-	result1 = rename(oldName.c_str(), newName.c_str());
+	move(oldName, newName);
 }
 void addfile(string name, string information) { 
 	ofstream myfile;
