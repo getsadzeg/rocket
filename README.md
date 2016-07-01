@@ -1,5 +1,5 @@
 # About
-Rocket is C++ library to operate and manage files easily. You can squeeze the amount of code with rocket.
+``rocket`` is C++ library to operate and manage files easily. You can squeeze the amount of code with ``rocket``.
 # Usage
 Just clone repository with 
 
