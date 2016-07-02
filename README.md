@@ -6,10 +6,10 @@ Just clone repository with
 ```
 git clone https://github.com/getsadzeg/rocket.git
 ```
-Now copy folder named 'lib' to your project and access it's files via:
+Now copy file named "rocket.h" to your project and access it via:
 
 ```cpp
-#include "../lib/rocket.h"
+#include "rocket.h"
 ```
 then you can just call functions demonstrated in 'main' source file.
 
